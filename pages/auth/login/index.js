@@ -9,6 +9,7 @@ import { InputText } from 'primereact/inputtext';
 import { classNames } from 'primereact/utils';
 
 const LoginPage = () => {
+    const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [checked, setChecked] = useState(false);
     const { layoutConfig } = useContext(LayoutContext);
@@ -16,6 +17,33 @@ const LoginPage = () => {
     const router = useRouter();
     const containerClassName = classNames('surface-ground flex align-items-center justify-content-center min-h-screen min-w-screen overflow-hidden', { 'p-input-filled': layoutConfig.inputStyle === 'filled' });
 
+
+    const user = {
+        email: 'abbasyakubu002@gmail.com',
+        password: 'password',
+      };
+      
+    
+    const handleLogin = () => {
+        // Check the email and password against your user object
+        // Replace this logic with your own implementation
+        if (email === user.email && password === user.password) {
+          router.push('//uikit/floatlabel'); // Redirect to the dashboard page
+        } else {
+          console.log('Invalid credentials'); // Add your own error handling logic here
+        }
+      }
+
+
+
+
+
+
+
+
+   
+   
+   
     return (
         <div className={containerClassName}>
             <div className="flex flex-column align-items-center justify-content-center">
@@ -24,7 +52,7 @@ const LoginPage = () => {
                     <div className="w-full surface-card py-8 px-5 sm:px-8" style={{ borderRadius: '53px' }}>
                         <div className="text-center mb-5">
                             <img src="/demo/images/login/avatar.png" alt="Image" height="50" className="mb-3" />
-                            <div className="text-900 text-3xl font-medium mb-3">Welcome, Isabel!</div>
+                            <div className="text-900 text-3xl font-medium mb-3">Welcome!</div>
                             <span className="text-600 font-medium">Sign in to continue</span>
                         </div>
 
@@ -48,7 +76,7 @@ const LoginPage = () => {
                                     Forgot password?
                                 </a>
                             </div>
-                            <Button label="Sign In" className="w-full p-3 text-xl" onClick={() => router.push('/')}></Button>
+                            <Button label="Sign In" className="w-full p-3 text-xl" onClick={(handleLogin)}></Button>
                         </div>
                     </div>
                 </div>
