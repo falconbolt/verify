@@ -22,7 +22,7 @@ import { Dropdown } from 'primereact/dropdown';
                 method: 'POST',
                 headers: {
                   'Content-Type': 'application/json',
-                  'x-api-key': 'test_bn5akuc7ec4rmm1fieubqa:NReVrr87mBHy1_zpX7RmvzWTbc8',
+                  'x-api-key': 'McRi7e7m.ez7ASQyXChlcsJ0ityIGxu6AVcsUcFeC',
                   'app-id': 'aea52b4f-2f63-4bae-b39b-35a104484bd2',
                 },
                 body: JSON.stringify({
@@ -44,9 +44,8 @@ import { Dropdown } from 'primereact/dropdown';
           
       
         return (
-          <div className="flex justify-content-center flex-wrap card-container yellow-container">
-            <div className="">
-              <div className="card">
+          <><div className="flex justify-content-center flex-wrap card-container yellow-container">
+                <div className="card">
                 <h5>BVN Search</h5>
                 <div className="formgroup-inline">
                   <div className="field">
@@ -64,14 +63,32 @@ import { Dropdown } from 'primereact/dropdown';
                   <Button label="Submit" onClick={handleSubmit} />
                 </div>
               </div>
-            </div>
           </div>
 
-        
 
+            <div className="grid">
+                <div className="card">
+                <div className="grid">
+                <div class="col">Auto</div>
+                <h5>BVN Search</h5>
+                </div>
+                
+
+              </div>
+            </div>
+          </>
         );
       };
       
+
+
+      
       export default BVNSearch;
+
+
+
+
+
+      
       
             
