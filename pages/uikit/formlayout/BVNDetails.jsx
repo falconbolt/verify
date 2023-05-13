@@ -27,7 +27,7 @@ const BVNDetails = ({ data }) => {
         src={`data:image/gif;base64, ${base64Image}`}
         alt="Base64 Image"
         width={300}
-        height={200}
+        height={350}
       />
       <p>Date of Birth: {data.bvn_data.dateOfBirth}</p>
       {/* Render other relevant BVN details */}
