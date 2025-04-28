@@ -23,7 +23,7 @@ def open_private_window():
     
     # Open new private window
     subprocess.Popen(["firefox", "--private-window", url])
-    time.sleep(2)  # Wait for browser to open
+    time.sleep(4)  # Wait for browser to open
 
 def close_private_window():
     """Close current private window"""
@@ -73,14 +73,14 @@ def fill_form(user_data):
     # Submit form (single tab press)
     pyautogui.press('tab')
     pyautogui.press('enter')
-    time.sleep(4)
+    time.sleep(6)
 
     # Solve captcha
     captcha_x = 534
     captcha_y = 373
     pyautogui.click(captcha_x, captcha_y)
     print("Captcha clicked")
-    time.sleep(6)
+    time.sleep(4)
 
     print(f"Successfully registered {user_data['first_name']}!")
 
